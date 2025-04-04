@@ -6,7 +6,7 @@ fun main() {
     val thirdStudent: Int = 3
     val fourthStudent: Int = 5
 
-    val avgGrade: Double = (firstStudent + secondStudent + thirdStudent + fourthStudent) / 4.0
+    val avgGrade = ((firstStudent + secondStudent + thirdStudent + fourthStudent).toFloat()) / 4
 
     println(avgGrade)
 }
