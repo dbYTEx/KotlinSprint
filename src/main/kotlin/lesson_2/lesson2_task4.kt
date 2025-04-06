@@ -1,13 +1,15 @@
 package org.example.lesson_2
 
+const val ONE_HUNDRED_PERCENT = 100
+
 fun main() {
     val crystalMineral: Int = 7
     val metallMineral: Int = 11
-    val buffRatio: Float = 1.2f
+    val buffRatio: Int = 20
 
-    val crystalMineralBuffOnly = (crystalMineral * buffRatio) - crystalMineral
-    val metallMineralBuffOnly = (metallMineral * buffRatio) - metallMineral
+    val crystalMineralBuffOnly: Int = crystalMineral * buffRatio / ONE_HUNDRED_PERCENT
+    val metallMineralBuffOnly: Int = metallMineral * buffRatio / ONE_HUNDRED_PERCENT
 
-    println(crystalMineralBuffOnly.toInt())
-    println(metallMineralBuffOnly.toInt())
+    println(crystalMineralBuffOnly)
+    println(metallMineralBuffOnly)
 }
