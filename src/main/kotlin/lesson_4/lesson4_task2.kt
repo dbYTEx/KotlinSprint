@@ -1,10 +1,22 @@
 package org.example.lesson_4
 
-fun main() {
-    val averageCategoryMinWeight: Int = 35
-    val averageCategoryMaxWeight: Int = 100
-    val averageCategoryMaxVolume: Int = 100
+const val MIN_WEIGHT: Int = 35
+const val MAX_WEIGHT: Int = 100
+const val MAX_VOLUME: Int = 100
 
-    println("Груз с весом 20 кг и объёмом 80 л соответствует категории 'Average': ${(20 > averageCategoryMinWeight) && (20 <= averageCategoryMaxWeight) && (80 < averageCategoryMaxVolume)}")
-    println("Груз с весом 50 кг и объёмом 100 л соответствует категории 'Average': ${(50 > averageCategoryMinWeight) && (50 <= averageCategoryMaxWeight) && (100 < averageCategoryMaxVolume)}")
+fun main() {
+    val firstCargoWeight: Int = 20
+    val firstCargoVolume: Int = 80
+    val secondCargoWeight: Int = 50
+    val secondCargoVolume: Int = 100
+
+    val isFirstCargoAverage: Boolean =
+        (firstCargoWeight > MIN_WEIGHT) && (firstCargoWeight <= MAX_WEIGHT) && (firstCargoVolume < MAX_VOLUME)
+    val isSecondCargoAverage: Boolean =
+        (secondCargoWeight > MIN_WEIGHT) && (secondCargoWeight <= MAX_WEIGHT) && (secondCargoVolume < MAX_VOLUME)
+
+    println("Груз с весом $firstCargoWeight кг и объёмом $firstCargoVolume л соответствует категории 'Average': " +
+            "$isFirstCargoAverage")
+    println("Груз с весом $secondCargoWeight кг и объёмом $secondCargoVolume л соответствует категории 'Average': " +
+            "$isSecondCargoAverage")
 }
