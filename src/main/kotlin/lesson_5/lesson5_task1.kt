@@ -1,13 +1,15 @@
 package org.example.lesson_5
 
-fun main() {
-    val captchaTask: Int = 5 + 19
+const val CAPTCHA_NUM_1: Int = 5
+const val CAPTCHA_NUM_2: Int = 19
+const val CAPTCHA_TASK: Int = CAPTCHA_NUM_1 + CAPTCHA_NUM_2
 
-    println("Для доступа в приложение требуется решить каптчу.\nСколько будет 5 + 19?")
+fun main() {
+    println("Для доступа в приложение требуется решить каптчу.\nСколько будет $CAPTCHA_NUM_1 + $CAPTCHA_NUM_2?")
 
     val userSolution: Int = readln().toInt()
 
-    if (captchaTask == userSolution) {
+    if (CAPTCHA_TASK == userSolution) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
